@@ -75,7 +75,7 @@ export function PalletCard({
   return (
     <Card elevation={1} style={style}>
       <CardHeader
-        cardTitle={
+        title={
           <span style={{ fontFamily: theme.typography.fontFamilyMono, fontSize: theme.typography.fontSize.md }}>
             {palletId}
           </span>

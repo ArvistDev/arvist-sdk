@@ -2,11 +2,10 @@ import React from 'react';
 import { useTheme } from '../../theme/index.ts';
 
 export interface TableProps extends React.TableHTMLAttributes<HTMLTableElement> {
-  stickyHeader?: boolean;
   size?: 'sm' | 'md';
 }
 
-export function Table({ stickyHeader, size = 'md', style, children, ...rest }: TableProps) {
+export function Table({ size = 'md', style, children, ...rest }: TableProps) {
   const theme = useTheme();
 
   const tableStyle: React.CSSProperties = {
@@ -26,7 +25,7 @@ export function Table({ stickyHeader, size = 'md', style, children, ...rest }: T
 
 Table.displayName = 'Table';
 
-export interface TableHeadProps extends React.HTMLAttributes<HTMLTableSectionElement> {}
+export type TableHeadProps = React.HTMLAttributes<HTMLTableSectionElement>;
 
 export function TableHead({ style, children, ...rest }: TableHeadProps) {
   return <thead style={style} {...rest}>{children}</thead>;
@@ -34,7 +33,7 @@ export function TableHead({ style, children, ...rest }: TableHeadProps) {
 
 TableHead.displayName = 'TableHead';
 
-export interface TableBodyProps extends React.HTMLAttributes<HTMLTableSectionElement> {}
+export type TableBodyProps = React.HTMLAttributes<HTMLTableSectionElement>;
 
 export function TableBody({ style, children, ...rest }: TableBodyProps) {
   return <tbody style={style} {...rest}>{children}</tbody>;

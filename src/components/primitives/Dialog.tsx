@@ -140,7 +140,7 @@ export function DialogContent({ dividers, style, children, ...rest }: DialogCont
 
 DialogContent.displayName = 'DialogContent';
 
-export interface DialogActionsProps extends React.HTMLAttributes<HTMLDivElement> {}
+export type DialogActionsProps = React.HTMLAttributes<HTMLDivElement>;
 
 export function DialogActions({ style, children, ...rest }: DialogActionsProps) {
   const theme = useTheme();

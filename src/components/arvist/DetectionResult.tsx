@@ -44,7 +44,7 @@ export function DetectionResult({
   return (
     <Card variant="outlined" style={style}>
       <CardHeader
-        cardTitle="Detection Results"
+        title="Detection Results"
         subheader={headerMeta || undefined}
         avatar={<span style={{ fontSize: '20px' }}>🎯</span>}
       />

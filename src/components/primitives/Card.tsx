@@ -35,14 +35,15 @@ export function Card({ elevation = 1, variant = 'elevation', style, children, ..
 Card.displayName = 'Card';
 
 export interface CardHeaderProps {
-  cardTitle?: React.ReactNode;
+  /** The card title. Named 'title' to match common Card APIs. */
+  title?: React.ReactNode;
   subheader?: React.ReactNode;
   avatar?: React.ReactNode;
   action?: React.ReactNode;
   style?: React.CSSProperties;
 }
 
-export function CardHeader({ cardTitle, subheader, avatar, action, style }: CardHeaderProps) {
+export function CardHeader({ title, subheader, avatar, action, style }: CardHeaderProps) {
   const theme = useTheme();
 
   const headerStyle: React.CSSProperties = {
@@ -57,7 +58,7 @@ export function CardHeader({ cardTitle, subheader, avatar, action, style }: Card
     <div style={headerStyle}>
       {avatar && <div style={{ flexShrink: 0 }}>{avatar}</div>}
       <div style={{ flex: 1, minWidth: 0 }}>
-        {cardTitle && (
+        {title && (
           <div
             style={{
               fontFamily: theme.typography.fontFamily,
@@ -69,7 +70,7 @@ export function CardHeader({ cardTitle, subheader, avatar, action, style }: Card
               textOverflow: 'ellipsis',
             }}
           >
-            {cardTitle}
+            {title}
           </div>
         )}
         {subheader && (

@@ -74,7 +74,7 @@ export function PluginStatusCard({
     <Card elevation={1} style={style}>
       <style>{pulseKeyframe}</style>
       <CardHeader
-        cardTitle={name}
+        title={name}
         subheader={version ? `v${version}` : undefined}
         avatar={
           <div

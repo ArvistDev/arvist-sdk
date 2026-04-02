@@ -55,7 +55,7 @@ export function EventFeed({
   return (
     <Card variant="outlined" style={style}>
       <CardHeader
-        cardTitle="Event Feed"
+        title="Event Feed"
         subheader={`${events.length} event${events.length !== 1 ? 's' : ''}`}
         avatar={<span style={{ fontSize: '20px' }}>📡</span>}
       />

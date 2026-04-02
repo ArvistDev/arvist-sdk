@@ -40,7 +40,7 @@ export function MetricCard({
     <Card elevation={1} style={{ position: 'relative', overflow: 'visible', ...style }}>
       <div style={accentStyle} />
       <CardHeader
-        cardTitle={
+        title={
           <span
             style={{
               fontFamily: theme.typography.fontFamily,
